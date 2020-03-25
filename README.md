@@ -1,2 +1,5 @@
 # onedrive-tray
-Stupid Simple OneDrive Tray Icon
+Stupid Simple OneDrive pyqt tray icon
+
+Using [onedrive-abraunegg](https://github.com/abraunegg/onedrive)
+
