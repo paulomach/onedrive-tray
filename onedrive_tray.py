@@ -1,7 +1,10 @@
+#!/usr/sbin/env python3
+
 import sys
 from PyQt5 import QtWidgets, QtGui
 import subprocess
 from time import sleep
+from os import path
 
 
 class SystemTrayIcon(QtWidgets.QSystemTrayIcon):
@@ -37,9 +40,9 @@ class SystemTrayIcon(QtWidgets.QSystemTrayIcon):
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
-
+    icon = path.dirname(sys.argv[0]) + '/onedrive.png'    
     w = QtWidgets.QDialog()
-    tray_icon = SystemTrayIcon(QtGui.QIcon("onedrive.png"), w)
+    tray_icon = SystemTrayIcon(QtGui.QIcon(icon), w)
 
     tray_icon.show()
     sys.exit(app.exec_())
